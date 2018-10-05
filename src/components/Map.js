@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 class Map extends Component {
+  //* This is a lifecycle event that fires after the component is loaded into the DOM and renders the map
   componentDidMount() {
     this.loadMap();
   }
