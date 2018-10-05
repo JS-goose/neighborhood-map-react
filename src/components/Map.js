@@ -15,8 +15,8 @@ class Map extends Component {
   //* This function initalizes the map
   initMap = () => {
     const map = new window.google.maps.Map(document.getElementById("map"), {
-      center: { lat: -34.397, lng: 150.644 },
-      zoom: 8,
+      center: { lat: 29.424122, lng: -98.493628 },
+      zoom: 11,
     });
   };
 
