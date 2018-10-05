@@ -33,20 +33,23 @@ class Map extends Component {
     });
   };
 
+  //* This function provides search parameters to Foursquare to match against queries
   getVenues = () => {
     const endpoint = "https://api.foursquare.com/v2/venues/explore?";
     const parameters = {
       client_id: `${fs_client_api}`,
       client_secret: `${fs_secret_api}`,
-      query: "tacos",
-      section: "food",
+      query: "fun",
+      section: "",
       near: "San Antonio",
       v: "20182507",
     };
 
+    //* Here we request data using Axios https://github.com/axios/axios 
     axios
       .get(endpoint + new URLSearchParams(parameters))
       .then((response) => {
+        //* Setting state for venues
         this.setState({
           venues: response.data.response.groups[0].items
         })
