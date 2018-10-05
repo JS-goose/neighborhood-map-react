@@ -1,10 +1,21 @@
 import React, { Component } from "react";
+import axios from "axios";
+
+//*! API Keys
+const fs_client_api = `${process.env.REACT_APP_FS_CLIENT}`;
+const fs_secret_api = `${process.env.REACT_APP_FS_SECRET}`;
 const GM_API_KEY = `${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`;
 
+
 class Map extends Component {
+
+  state = {
+    venues: []
+  }
   //* This is a lifecycle event that fires after the component is loaded into the DOM and renders the map
   componentDidMount() {
     this.loadMap();
+    this.getVenues();
   }
   //* This function loads the map
   loadMap = () => {
@@ -20,6 +31,29 @@ class Map extends Component {
       center: { lat: 29.424122, lng: -98.493628 },
       zoom: 11,
     });
+  };
+
+  getVenues = () => {
+    const endpoint = "https://api.foursquare.com/v2/venues/explore?";
+    const parameters = {
+      client_id: `${fs_client_api}`,
+      client_secret: `${fs_secret_api}`,
+      query: "tacos",
+      section: "food",
+      near: "San Antonio",
+      v: "20182507",
+    };
+
+    axios
+      .get(endpoint + new URLSearchParams(parameters))
+      .then((response) => {
+        this.setState({
+          venues: response.data.response.groups[0].items
+        })
+      })
+      .catch((error) => {
+        console.log(`Error in Axios get: ${error}`);
+      });
   };
 
   render() {
