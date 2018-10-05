@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+const GM_API_KEY = `${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`;
 
 class Map extends Component {
   //* This is a lifecycle event that fires after the component is loaded into the DOM and renders the map
@@ -8,7 +9,7 @@ class Map extends Component {
   //* This function loads the map
   loadMap = () => {
     loadScript(
-      "https://maps.googleapis.com/maps/api/js?key=AIzaSyCeg7QO_VyQ3FWMQexN8WPLJvGSDXOynuc&callback=initMap"
+      `https://maps.googleapis.com/maps/api/js?key=${GM_API_KEY}&callback=initMap`
     );
     window.initMap = this.initMap;
   };
