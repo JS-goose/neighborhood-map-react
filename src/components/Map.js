@@ -1,19 +1,25 @@
 import React, { Component } from "react";
 
 class Map extends Component {
-  // *This function creates a useable script so we can insert Google Maps without using any 3rd party loaders
+  componentDidMount() {
+    this.loadMap();
+  }
+  //* This function loads the map
   loadMap = () => {
     loadScript(
       "https://maps.googleapis.com/maps/api/js?key=AIzaSyCeg7QO_VyQ3FWMQexN8WPLJvGSDXOynuc&callback=initMap"
     );
+    window.initMap = this.initMap;
   };
 
+  //* This function initalizes the map
   initMap = () => {
-    let map = new window.google.maps.Map(document.getElementById("map"), {
+    const map = new window.google.maps.Map(document.getElementById("map"), {
       center: { lat: -34.397, lng: 150.644 },
       zoom: 8,
     });
   };
+
   render() {
     return (
       <main>
@@ -23,6 +29,9 @@ class Map extends Component {
   }
 }
 
+// *This function creates a useable script so we can insert Google Maps without using any 3rd party loaders
+// *and was used with permission from Elharony at this link
+// *https://www.youtube.com/watch?v=W5LhLZqj76s&index=2&list=PLBDR9JgF-I5Qz6A2TjO2bslaltdxwWy8i
 function loadScript(url) {
   let index = window.document.getElementsByTagName("script")[0];
   let script = window.document.createElement("script");
