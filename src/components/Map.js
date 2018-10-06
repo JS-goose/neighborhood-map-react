@@ -31,6 +31,19 @@ class Map extends Component {
       center: { lat: 29.424122, lng: -98.493628 },
       zoom: 11,
     });
+
+    this.state.venues.forEach((cv, i) => {
+      let position = this.venues[i].venue.location
+      let title = this.venues[i].venue.location.name;
+      let marker = new window.google.maps.Marker({
+        map: map, 
+        position: position,
+        title: title,
+        animation: window.google.maps.Animation.DROP,
+        id: i
+    
+      })
+    });
   };
 
   //* This function provides search parameters to Foursquare to match against queries
@@ -79,5 +92,7 @@ function loadScript(url) {
   script.defer = true;
   index.parentNode.insertBefore(script, index);
 }
+
+
 
 export default Map;
