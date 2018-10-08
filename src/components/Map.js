@@ -29,6 +29,9 @@ class Map extends Component {
       zoom: 11,
     });
 
+    //* Creates a new info window instance to use on markers
+    let infowindow = new window.google.maps.InfoWindow();
+
     //* Loops over all venue items and dynamically creates markers for them
     this.state.venues.map((index) => {
       let position = {
@@ -42,6 +45,17 @@ class Map extends Component {
         title: title,
         animation: window.google.maps.Animation.DROP,
         id: index,
+      });
+
+      let content = `<div id="infowindow"><h1>${index.venue.name}</h1></div>`
+
+      // * Adds click event listener to markers
+      marker.addListener("click", () => {
+        // * Resets info window and content when marker is clicked
+        infowindow.setContent(content);
+
+        // * Opens info window on marker when clicked
+        infowindow.open(map, marker);
       });
     });
   };
