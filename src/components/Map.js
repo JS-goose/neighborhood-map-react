@@ -29,6 +29,7 @@ class Map extends Component {
       zoom: 11,
     });
 
+    //* Loops over all venue items and dynamically creates markers for them
     this.state.venues.map((index) => {
       let position = {
         lat: index.venue.location.lat,
