@@ -55,7 +55,7 @@ class Map extends Component {
       query: "fun",
       section: "",
       near: "San Antonio",
-      v: "20182507",
+      v: "20181008",
     };
 
     //* Here we request data using Axios https://github.com/axios/axios 
