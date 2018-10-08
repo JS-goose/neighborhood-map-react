@@ -34,14 +34,14 @@ class Map extends Component {
 
     this.state.venues.forEach((cv, i) => {
       let position = this.venues[i].venue.location
+      console.log(position);
       let title = this.venues[i].venue.location.name;
       let marker = new window.google.maps.Marker({
         map: map, 
         position: position,
         title: title,
         animation: window.google.maps.Animation.DROP,
-        id: i
-    
+        id: i,    
       })
     });
   };
