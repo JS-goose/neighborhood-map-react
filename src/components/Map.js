@@ -75,7 +75,7 @@ class Map extends Component {
   render() {
     return (
       <main>
-        <div id="map" />
+        <div role="application" aria-hidden="true" id="map" />
       </main>
     );
   }
