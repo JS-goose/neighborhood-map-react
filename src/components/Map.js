@@ -14,7 +14,6 @@ class Map extends Component {
   }
   //* This is a lifecycle event that fires after the component is loaded into the DOM and renders the map
   componentDidMount() {
-    this.loadMap();
     this.getVenues();
   }
   //* This function loads the map
@@ -32,16 +31,15 @@ class Map extends Component {
       zoom: 11,
     });
 
-    this.state.venues.forEach((cv, i) => {
-      let position = this.venues[i].venue.location
-      console.log(position);
-      let title = this.venues[i].venue.location.name;
+    this.state.venues.map((index) => {
+      let position = {lat: index.venue.location.lat, lng: index.venue.location.lng}
+      let title = index.venue.name;
       let marker = new window.google.maps.Marker({
         map: map, 
         position: position,
         title: title,
         animation: window.google.maps.Animation.DROP,
-        id: i,    
+        id: index,    
       })
     });
   };
@@ -62,10 +60,11 @@ class Map extends Component {
     axios
       .get(endpoint + new URLSearchParams(parameters))
       .then((response) => {
+        console.log(response);
         //* Setting state for venues
         this.setState({
           venues: response.data.response.groups[0].items
-        })
+        },     this.loadMap())
       })
       .catch((error) => {
         console.log(`Error in Axios get: ${error}`);
