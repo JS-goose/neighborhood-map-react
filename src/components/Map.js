@@ -6,12 +6,10 @@ const fs_client_api = `${process.env.REACT_APP_FS_CLIENT}`;
 const fs_secret_api = `${process.env.REACT_APP_FS_SECRET}`;
 const GM_API_KEY = `${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`;
 
-
 class Map extends Component {
-
   state = {
-    venues: []
-  }
+    venues: [],
+  };
   //* This is a lifecycle event that fires after the component is loaded into the DOM and renders the map
   componentDidMount() {
     this.getVenues();
@@ -32,15 +30,18 @@ class Map extends Component {
     });
 
     this.state.venues.map((index) => {
-      let position = {lat: index.venue.location.lat, lng: index.venue.location.lng}
+      let position = {
+        lat: index.venue.location.lat,
+        lng: index.venue.location.lng,
+      };
       let title = index.venue.name;
       let marker = new window.google.maps.Marker({
-        map: map, 
+        map: map,
         position: position,
         title: title,
         animation: window.google.maps.Animation.DROP,
-        id: index,    
-      })
+        id: index,
+      });
     });
   };
 
@@ -56,15 +57,19 @@ class Map extends Component {
       v: "20181008",
     };
 
-    //* Here we request data using Axios https://github.com/axios/axios 
+    //* Here we request data using Axios https://github.com/axios/axios
     axios
       .get(endpoint + new URLSearchParams(parameters))
       .then((response) => {
         console.log(response);
         //* Setting state for venues
-        this.setState({
-          venues: response.data.response.groups[0].items
-        },     this.loadMap())
+        this.setState(
+          {
+            venues: response.data.response.groups[0].items,
+          },
+          this.loadMap()
+        ); /* //*the loadMap call was added here to load once the venues has been populated.  
+          //*If this call were to be in componentDidMount our loop would have no info to loop over*/
       })
       .catch((error) => {
         console.log(`Error in Axios get: ${error}`);
@@ -91,7 +96,5 @@ function loadScript(url) {
   script.defer = true;
   index.parentNode.insertBefore(script, index);
 }
-
-
 
 export default Map;
