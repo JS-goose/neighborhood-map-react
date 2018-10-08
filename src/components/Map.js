@@ -47,7 +47,14 @@ class Map extends Component {
         id: index,
       });
 
-      let content = `<div id="infowindow"><h1>${index.venue.name}</h1></div>`
+      let content = `
+      <div id="infowindow">
+        <p>
+          ${index.venue.name}
+        </p>
+        <p>
+        ${index.venue.location.address}
+      </div>`;
 
       // * Adds click event listener to markers
       marker.addListener("click", () => {
