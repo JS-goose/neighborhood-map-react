@@ -43,7 +43,7 @@ html, body {
 #sidebarContainer {
   width: 25%;
   min-width: 25%;
-  border: 1px solid blue;
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 #sidebarHeader {
@@ -57,6 +57,11 @@ html, body {
   background: black;
   color: lightblue;
   border: none;
+}
+
+#venueList {
+  list-style: none;
+  padding: 1px;
 }
 
 

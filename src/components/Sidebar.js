@@ -8,7 +8,7 @@ class Sidebar extends Component {
         <h1 id="sidebarHeader">San Antonio</h1>
         <label>Search Venues</label>
         <input id="filter" type="search" placeholder="amusement park"></input>
-        <SidebarList />
+        <SidebarList {...this.props}/>
       </aside>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Sidebar from './Sidebar';
 
 //*! API Keys
 const fs_client_api = `${process.env.REACT_APP_FS_CLIENT}`;
@@ -105,6 +106,7 @@ class Map extends Component {
   render() {
     return (
       <main id="main">
+        <Sidebar {...this.state} />
         <div role="application" aria-hidden="true" id="map" />
       </main>
     );
