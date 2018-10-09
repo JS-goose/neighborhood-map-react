@@ -21,6 +21,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-size: 14px;
 }
 
 #main {
@@ -38,19 +39,29 @@ html, body {
 }
 
 #sidebarContainer {
+  background: lightblue;
   width: 20%;
   min-width: 20%;
   border-right: 1px solid rgba(0, 0, 0, 0.5);
   height: 100vh;
+  max-height: 100%;
 }
 
 #sidebarHeader {
-  color: lightblue;
+  color: salmon;
 }
 
 #venueList {
   list-style: none;
   padding: 1px;
+}
+
+.venueItem {
+  font-size: 1rem;
+  padding: .5rem;
+  margin-top: 1rem;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 input {
