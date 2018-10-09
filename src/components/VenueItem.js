@@ -2,10 +2,8 @@ import React, { Component } from "react";
 
 class VenueItem extends Component {
   render() {
-    return (
-        <li>One</li>
-    );
+    return <li>{this.props.venue}</li>;
   }
 }
 
-export default VenueItem
+export default VenueItem;

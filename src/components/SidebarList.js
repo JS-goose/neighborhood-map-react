@@ -5,6 +5,10 @@ class SidebarList extends Component {
   render() {
     return (
       <ol id="venueList">
+        {this.props.venues &&
+          this.props.venues.map((venue, venueKey) => (
+            <VenueItem key={venueKey}/>
+          ))}
       </ol>
     );
   }

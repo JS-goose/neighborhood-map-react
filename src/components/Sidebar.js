@@ -6,7 +6,7 @@ class Sidebar extends Component {
     return (
       <aside id="sidebarContainer">
         <h1 id="sidebarHeader">San Antonio</h1>
-        <label for="filter">Search Venues</label>
+        <label htmlFor="filter">Search Venues</label>
         <input id="filter" type="search" placeholder="amusement park"></input>
         <SidebarList {...this.props}/>
       </aside>

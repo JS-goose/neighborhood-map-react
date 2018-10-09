@@ -90,7 +90,7 @@ class App extends Component {
     axios
       .get(endpoint + new URLSearchParams(parameters))
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         //* Setting state for venues
         this.setState(
           {
