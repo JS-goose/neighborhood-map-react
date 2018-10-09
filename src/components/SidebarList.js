@@ -5,7 +5,6 @@ class SidebarList extends Component {
   render() {
     return (
       <ol id="venueList">
-      {console.log(this.props.venues)}
       </ol>
     );
   }
