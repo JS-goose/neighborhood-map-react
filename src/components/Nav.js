@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Nav extends Component {
-    render() {
-        return (
-            <nav>
-            <div id ="nav">
-                <h1 id="header">Neighborhood Maps <span id="closeNav">X</span></h1>
-                </div>
-            </nav>
-        )
-    }
+  render() {
+    return (
+      <nav>
+        <div id="nav">
+          <h1 class="header">Neighborhood Maps</h1>
+          <button id="closeNav">X</button>
+        </div>
+      </nav>
+    );
+  }
 }
 
-export default Nav
+export default Nav;
