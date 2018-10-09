@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { slide as Nav } from 'react-burger-menu'
 
 class Nav extends Component {
     render() {
         return (
-            <nav>
-                <h1>Neighborhood Maps</h1>
+            <nav id="nav">
+                <h1 id="header">Neighborhood Maps</h1>
             </nav>
         )
     }
