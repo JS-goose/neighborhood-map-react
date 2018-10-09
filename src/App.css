@@ -1,7 +1,5 @@
 .App {
   text-align: center;
-  display: flex;
-  flex-flow: row nowrap;
   height: 100vh;
   width: 100vw;
 }
@@ -26,37 +24,28 @@ html, body {
 }
 
 #main {
-  width: 75%;
-  /* max-width: 75%; */
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 #map {
   /* TODO: Add media query to adjust map height at lower resolution */
   height: 100vh;
   max-height: 100vh;
-  width: 100%;
+  width: 80%;
   max-width: 80vw;
-  margin: 0;
-  padding: 0;
 }
 
 #sidebarContainer {
-  width: 25%;
-  min-width: 25%;
+  width: 20%;
+  min-width: 20%;
   border-right: 1px solid rgba(0, 0, 0, 0.5);
+  height: 100vh;
 }
 
 #sidebarHeader {
   color: lightblue;
-}
-
-#closeNav {
-  margin: 15px 5px 0 0;
-  height: 30px;
-  width: 30px;
-  background: black;
-  color: lightblue;
-  border: none;
 }
 
 #venueList {
