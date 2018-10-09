@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class VenueItem extends Component {
   render() {
-    return <li>{this.props.venue}</li>;
+    return <li className="venueItem">{this.props.venue.venue.name}</li>;
   }
 }
 

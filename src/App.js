@@ -10,9 +10,10 @@ const fs_secret_api = `${process.env.REACT_APP_FS_SECRET}`;
 const GM_API_KEY = `${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`;
 
 class App extends Component {
-  state = {
-    venues: [],
-  };
+    state = {
+      venues: [],
+    };
+  
   //* This is a lifecycle event that fires after the component is loaded into the DOM and renders the map
   componentDidMount() {
     this.getVenues();

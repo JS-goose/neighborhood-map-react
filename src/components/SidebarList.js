@@ -6,8 +6,8 @@ class SidebarList extends Component {
     return (
       <ol id="venueList">
         {this.props.venues &&
-          this.props.venues.map((venue, venueKey) => (
-            <VenueItem key={venueKey}/>
+          this.props.venues.map((venue,venueKey) => (
+            <VenueItem key={venueKey} venue={venue}/>
           ))}
       </ol>
     );
