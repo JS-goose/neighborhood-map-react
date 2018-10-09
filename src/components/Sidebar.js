@@ -1,24 +1,15 @@
 import React, { Component } from "react";
+import SidebarList from "./SidebarList";
 
 class Sidebar extends Component {
   render() {
     return (
-    //   <nav id="navContainer">
-    //     <div id="nav">
-    //       <h1 className="header">Neighborhood Maps</h1>
-    //       <button id="closeNav">X</button>
-    //     </div>
-
-        <aside id="sidebarContainer">
+      <aside id="sidebarContainer">
         <h1 id="sidebarHeader">San Antonio</h1>
-            <ol>
-              <li>One</li>
-              <li>Two</li>
-              <li>Three</li>
-              <li>Four</li>
-            </ol>
-        </aside>
-    //   </nav>
+        <label>Search Venues</label>
+        <input id="filter" type="search" placeholder="amusement park"></input>
+        <SidebarList />
+      </aside>
     );
   }
 }
