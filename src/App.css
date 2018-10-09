@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 .App-logo {
@@ -39,12 +41,18 @@ html, body {
 
 #map {
   /* TODO: Add media query to adjust map height at lower resolution */
-  height: 920px;
+  height: 100vh;
   max-height: 100vh;
-  width: 100vw;
-  max-width: 100vw;
+  width: 83vw;
+  max-width: 80vw;
   margin: 0;
   padding: 0;
+}
+
+#navContainer {
+  width: 20vw;
+  max-width: 50%;
+
 }
 
 #nav {
@@ -58,13 +66,13 @@ html, body {
 }
 
 .header {
-  padding-left: 10px;
+  padding-left: 30px;
 }
 
 #closeNav {
   margin: 15px 5px 0 0;
   height: 30px;
-  width: 50px;
+  width: 30px;
   background: black;
   color: lightblue;
   border: none;
