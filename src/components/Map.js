@@ -106,7 +106,7 @@ class Map extends Component {
   render() {
     return (
       <main id="main">
-        <Sidebar {...this.state} />
+        {/* <Sidebar {...this.state} /> */}
         <div role="application" aria-hidden="true" id="map" />
       </main>
     );
