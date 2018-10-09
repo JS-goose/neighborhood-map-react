@@ -40,24 +40,14 @@ html, body {
   padding: 0;
 }
 
-/* Entire sidebar container including nav */
-#navContainer {
+#sidebarContainer {
   width: 25%;
-  /* max-width: 20%;
-  margin: 0;
-  padding: 0; */
+  min-width: 25%;
+  border: 1px solid blue;
 }
 
-#nav {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  border-bottom: 1px solid rgba(0,0,0, 0.4);
-  background: lightblue;
-}
-
-.header {
-  padding-left: 30px;
+#sidebarHeader {
+  color: lightblue;
 }
 
 #closeNav {
@@ -70,7 +60,7 @@ html, body {
 }
 
 
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
   #main {
     width: 60%;
   }
@@ -92,4 +82,4 @@ html, body {
   #nav {
     width: 100%;
   }
-}
+} */
