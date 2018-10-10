@@ -12,6 +12,7 @@ const GM_API_KEY = `${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`;
 class App extends Component {
   state = {
     venues: [],
+    markers: [],
   };
 
   //* This is a lifecycle event that fires after the component is loaded into the DOM and renders the map
@@ -27,8 +28,19 @@ class App extends Component {
   };
 
   handleVenueClick = (venueListItem) => {
-    alert(venueListItem.venue.venue.name);
-  };
+    console.log("Venue id:" + this.state.venues[22].venue.id)
+    console.log("Marker id:" + this.state.markers[22].id)
+    // ! This creates an infinite recursion loop, don't use this
+    const marker = this.state.markers.find((marker) => {if (marker.id === this.state.venue.id) {
+      console.log(true)
+    } else {
+      console.log(false)
+    }
+   })
+    // * This doesn't work at all - says this.state.venues.venue and this.props.venues.venue.id is undefined
+    // const marker = this.state.markers.find((marker, venue) => marker.id === this.state.venues.id)
+    // this.handleVenueClick(marker);
+  }
 
   //* This function initalizes the map
   initMap = () => {
@@ -49,8 +61,11 @@ class App extends Component {
         position: position,
         title: title,
         animation: window.google.maps.Animation.DROP,
-        id: index,
+        id: index.venue.id,
       });
+
+      // * Pushes markers to state after they have been created
+      this.setState(()=> this.state.markers.push(marker));
 
       //* Creates a new info window instance to use on markers
       let infowindow = new window.google.maps.InfoWindow();
