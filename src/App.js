@@ -10,10 +10,10 @@ const fs_secret_api = `${process.env.REACT_APP_FS_SECRET}`;
 const GM_API_KEY = `${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`;
 
 class App extends Component {
-    state = {
-      venues: [],
-    };
-  
+  state = {
+    venues: [],
+  };
+
   //* This is a lifecycle event that fires after the component is loaded into the DOM and renders the map
   componentDidMount() {
     this.getVenues();
@@ -33,9 +33,6 @@ class App extends Component {
       zoom: 11,
     });
 
-    //* Creates a new info window instance to use on markers
-    let infowindow = new window.google.maps.InfoWindow();
-
     //* Loops over all venue items and dynamically creates markers for them
     this.state.venues.map((index) => {
       let position = {
@@ -51,6 +48,10 @@ class App extends Component {
         id: index,
       });
 
+      //* Creates a new info window instance to use on markers
+      let infowindow = new window.google.maps.InfoWindow();
+
+      // *This is the information displayed in the infowindow
       let content = `
         <div id="infowindow">
         <h1 class = "infoHeader">
