@@ -27,7 +27,7 @@ class App extends Component {
   };
 
   handleVenueClick = (venueListItem) => {
-    console.log(venueListItem);
+    alert(venueListItem.venue.venue.name);
   };
 
   //* This function initalizes the map
@@ -115,7 +115,7 @@ class App extends Component {
     return (
       <div className="App">
         <main id="main">
-          <Sidebar {...this.state} />
+          <Sidebar {...this.state} handleVenueClick={this.handleVenueClick} />
           <Map {...this.state} />
         </main>
       </div>
