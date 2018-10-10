@@ -26,6 +26,10 @@ class App extends Component {
     window.initMap = this.initMap;
   };
 
+  handleVenueClick = (venueListItem) => {
+    console.log(venueListItem);
+  };
+
   //* This function initalizes the map
   initMap = () => {
     const map = new window.google.maps.Map(document.getElementById("map"), {
