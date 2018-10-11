@@ -25,7 +25,8 @@ html, body {
 }
 
 #main {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-flow: row nowrap;
 }
@@ -45,6 +46,7 @@ html, body {
   border-right: 1px solid rgba(0, 0, 0, 0.5);
   height: 100vh;
   max-height: 100%;
+  /* overflow: hidden; */
 }
 
 #sidebarHeader {
@@ -52,14 +54,18 @@ html, body {
 }
 
 #venueList {
+  display: flex;
+  flex-flow: column nowrap;
   list-style: none;
-  padding: 1px;
+  padding: 0.1em;
+  max-height: 100%;
+  /* overflow: auto; */
 }
 
 .venueItem {
   font-size: 1rem;
-  padding: .5rem;
-  margin-top: 1rem;
+  padding: .2rem;
+  margin-top: 0.30rem;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
