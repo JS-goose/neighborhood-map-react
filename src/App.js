@@ -28,18 +28,11 @@ class App extends Component {
   };
 
   handleVenueClick = (venueListItem) => {
-    console.log("Venue id:" + this.state.venues[22].venue.id)
-    console.log("Marker id:" + this.state.markers[22].id)
-    // ! This creates an infinite recursion loop, don't use this
-    const marker = this.state.markers.find((marker) => {if (marker.id === this.state.venue.id) {
-      console.log(true)
-    } else {
-      console.log(false)
-    }
-   })
-    // * This doesn't work at all - says this.state.venues.venue and this.props.venues.venue.id is undefined
-    // const marker = this.state.markers.find((marker, venue) => marker.id === this.state.venues.id)
-    // this.handleVenueClick(marker);
+    // console.log("Venue id:" + this.state.venues[22].venue.id)
+    // console.log("Marker id:" + this.state.markers[22].id)
+    const marker = this.state.markers.filter((marker) => {
+      console.log(venueListItem);
+    })
   }
 
   //* This function initalizes the map
