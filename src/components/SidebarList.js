@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import VenueItem from "./VenueItem";
 
-const SidebarList = ({ venues, handleVenueClick }) => {
+const SidebarList = ({ venues, handleVenueClick, infowindow }) => {
   return (
     <ol id="venueList">
       {venues &&
@@ -10,6 +10,7 @@ const SidebarList = ({ venues, handleVenueClick }) => {
             key={venueKey}
             venue={venue}
             handleVenueClick={handleVenueClick}
+            infowindow={infowindow}
           />
         ))}
     </ol>
