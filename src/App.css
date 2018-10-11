@@ -59,13 +59,13 @@ html, body {
   list-style: none;
   padding: 0.1em;
   max-height: 100%;
-  /* overflow: auto; */
+  overflow: auto;
 }
 
 .venueItem {
   font-size: 1rem;
   padding: .2rem;
-  margin-top: 0.30rem;
+  margin-top: 0.3rem;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
