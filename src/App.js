@@ -6,9 +6,8 @@ import Sidebar from "./components/Sidebar";
 import { timingSafeEqual } from "crypto";
 
 //*! API Keys
-const fs_client_api = `${process.env.REACT_APP_FS_CLIENT}`;
-const fs_secret_api = `${process.env.REACT_APP_FS_SECRET}`;
-const GM_API_KEY = `${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`;
+// const fs_client_api = process.env.REACT_APP_FS_CLIENT;
+// const fs_secret_api = process.env.REACT_APP_FS_SECRET;
 
 class App extends Component {
   state = {
@@ -17,12 +16,12 @@ class App extends Component {
   };
 
   //* This is a lifecycle event that fires after the component is loaded into the DOM and renders the map
-  componentDidMount() {
-    this.getVenues();
-  }
+  // componentDidMount() {
+  //   this.getVenues();
+  // }
   //* This function loads the map
   loadMap = () => {
-    loadScript(`https://maps.googleapis.com/maps/api/js?key=${GM_API_KEY}&callback=initMap`);
+    loadScript(`https://maps.googleapis.com/maps/api/js?key=AIzaSyCeg7QO_VyQ3FWMQexN8WPLJvGSDXOynuc&callback=initMap`);
     window.initMap = this.initMap;
   };
 
@@ -231,35 +230,35 @@ class App extends Component {
   };
 
   //* This function provides search parameters to Foursquare to match against queries
-  getVenues = () => {
-    const endpoint = "https://api.foursquare.com/v2/venues/explore?";
-    const parameters = {
-      client_id: `${fs_client_api}`,
-      client_secret: `${fs_secret_api}`,
-      query: "fun",
-      section: "",
-      near: "San Antonio",
-      v: "20181008",
-    };
+  // getVenues = () => {
+  //   const endpoint = "https://api.foursquare.com/v2/venues/explore?";
+  //   const parameters = {
+  //     client_id: {fs_client_api},
+  //     client_secret: {fs_secret_api},
+  //     query: "fun",
+  //     section: "",
+  //     near: "San Antonio",
+  //     v: "20181008",
+  //   };
 
-    //* Here we request data using Axios https://github.com/axios/axios
-    axios
-      .get(endpoint + new URLSearchParams(parameters))
-      .then((response) => {
-        // console.log(response);
-        //* Setting state for venues
-        this.setState(
-          {
-            venues: response.data.response.groups[0].items,
-          },
-          this.loadMap()
-        ); /* //*the loadMap call was added here to load once the venues has been populated.  
-            //*If this call were to be in componentDidMount our loop would have no info to loop over*/
-      })
-      .catch((error) => {
-        console.log(`Error in Axios get: ${error}`);
-      });
-  };
+  //   //* Here we request data using Axios https://github.com/axios/axios
+  //   axios
+  //     .get(endpoint + new URLSearchParams(parameters))
+  //     .then((response) => {
+  //       // console.log(response);
+  //       //* Setting state for venues
+  //       this.setState(
+  //         {
+  //           venues: response.data.response.groups[0].items,
+  //         },
+  //         this.loadMap()
+  //       ); /* //*the loadMap call was added here to load once the venues has been populated.  
+  //           //*If this call were to be in componentDidMount our loop would have no info to loop over*/
+  //     })
+  //     .catch((error) => {
+  //       console.log(`Error in Axios get: ${error}`);
+  //     });
+  // };
 
   render() {
     return (
