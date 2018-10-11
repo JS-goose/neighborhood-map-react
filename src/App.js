@@ -28,17 +28,8 @@ class App extends Component {
   };
 
   handleVenueClick = (venueListItem) => {
-    // console.log("Venue id:" + this.state.venues[22].venue.id)
-    // console.log("Marker id:" + this.state.markers[22].id)
-    const marker = this.state.markers.map((marker) => {
-      if (marker.id === venueListItem.venue.venue.id) {
-        console.log(marker.id);
-        console.log(venueListItem.venue.venue.id)
-      } else {
-        console.log(false);
-      }
-    })
-  }
+    // const marker = this.state.markers.filter((marker) => marker.id ===)
+  };
 
   //* This function initalizes the map
   initMap = () => {
@@ -63,10 +54,11 @@ class App extends Component {
       });
 
       // * Pushes markers to state after they have been created`
-      this.setState(()=> this.state.markers.push(marker));
+      this.setState(() => this.state.markers.push(marker));
 
-      //* Creates a new info window instance to use on markers
+      //* Creates a new info window instance to use on markers and then sets it to state
       let infowindow = new window.google.maps.InfoWindow();
+      this.setState({infowindow:infowindow});
 
       // *This is the information displayed in the infowindow
       let content = `
@@ -85,10 +77,10 @@ class App extends Component {
       // * Adds click event listener to markers
       marker.addListener("click", () => {
         // * Resets info window and content when marker is clicked
-        infowindow.setContent(content);
+        this.state.infowindow.setContent(content);
 
         // * Opens info window on marker when clicked
-        infowindow.open(map, marker);
+        this.state.infowindow.open(map, marker);
       });
     });
   };
