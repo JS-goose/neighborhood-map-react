@@ -30,8 +30,13 @@ class App extends Component {
   handleVenueClick = (venueListItem) => {
     // console.log("Venue id:" + this.state.venues[22].venue.id)
     // console.log("Marker id:" + this.state.markers[22].id)
-    const marker = this.state.markers.filter((marker) => {
-      console.log(venueListItem);
+    const marker = this.state.markers.map((marker) => {
+      if (marker.id === venueListItem.venue.venue.id) {
+        console.log(marker.id);
+        console.log(venueListItem.venue.venue.id)
+      } else {
+        console.log(false);
+      }
     })
   }
 
@@ -57,7 +62,7 @@ class App extends Component {
         id: index.venue.id,
       });
 
-      // * Pushes markers to state after they have been created
+      // * Pushes markers to state after they have been created`
       this.setState(()=> this.state.markers.push(marker));
 
       //* Creates a new info window instance to use on markers

@@ -5,7 +5,7 @@ class VenueItem extends Component {
     return (
       <li
         className="venueItem"
-        onClick={() => this.props.handleVenueClick()}
+        onClick={() => this.props.handleVenueClick(this.props)}
       >
         {this.props.venue.venue.name}
       </li>
