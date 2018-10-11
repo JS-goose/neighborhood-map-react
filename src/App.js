@@ -28,20 +28,38 @@ class App extends Component {
     window.initMap = this.initMap;
   };
 
+  setInfoWinContent = () => {
+    console.log(this.state.venues)
+    // let content = `
+    //     <div id="infowindow">
+    //     <h1 class = "infoHeader">
+    //       ${this.state.venues.venue.name}
+    //     </h1>
+    //     <p>
+    //       ${this.state.venues.venue.location.formattedAddress[0]}
+    //     </p>
+    //     <p>
+    //       ${this.state.venues.venue.location.formattedAddress[1]}
+    //     </p>
+    //     </div>`;
+
+    // this.setState({ content: content });
+  };
+
   handleVenueClick = (venueListItem) => {
-    console.log("before" + this.state.content)
-    const marker = this.state.markers
-      .filter((marker) => {
-        if (marker.id === venueListItem.venue.venue.id) {
-          // this.setState({content:venueListItem.venue.venue.name})
-          this.state.infowindow.setContent(this.state.content);
-          this.state.infowindow.open(this.initMap, marker);
-        }
-      })
-      // .map((marker) => {
-      //   console.log(this.state.content);
-      // });
-      console.log("after" + this.state.content)
+    console.log("before" + this.state.content);
+    const marker = this.state.markers.filter((marker) => {
+      if (marker.id === venueListItem.venue.venue.id) {
+        // this.setState({content:venueListItem.venue.venue.name})
+        // this.state.infowindow.setContent();
+        this.setInfoWinContent(this.props);
+        this.state.infowindow.open(this.initMap, marker);
+      }
+    });
+    // .map((marker) => {
+    //   console.log(this.state.content);
+    // });
+    console.log("after" + this.state.content);
   };
 
   //* This function initalizes the map
@@ -226,12 +244,12 @@ class App extends Component {
         </p>
         </div>`;
 
-      this.setState({ content: content });
+      // this.setState({ content: content });
 
       // * Adds click event listener to markers
       marker.addListener("click", () => {
         // * Resets info window and content when marker is clicked
-        this.state.infowindow.setContent(content);
+        this.state.infowindow.setContent(this.state.content);
 
         // * Opens info window on marker when clicked
         this.state.infowindow.open(map, marker);
