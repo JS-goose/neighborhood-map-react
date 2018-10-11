@@ -23,23 +23,33 @@ class App extends Component {
   //* This function loads the map
   loadMap = () => {
     loadScript(
-      `https://maps.googleapis.com/maps/api/js?key=${GM_API_KEY}&callback=initMap`
+      `https://maps.googleapis.com/maps/api/js?key=AIzaSyCeg7QO_VyQ3FWMQexN8WPLJvGSDXOynuc&callback=initMap`
     );
     window.initMap = this.initMap;
   };
 
   handleVenueClick = (venueListItem) => {
+    console.log("before" + this.state.content)
     const marker = this.state.markers
-      .filter((marker) => marker.id === venueListItem.venue.venue.id)
-      .map((marker) => {
-        this.state.infowindow.setContent(this.state.content);
-        this.state.infowindow.open(this.initMap, marker);
-        console.log(this.state.content);
-      });
+      .filter((marker) => {
+        if (marker.id === venueListItem.venue.venue.id) {
+          // this.setState({content:venueListItem.venue.venue.name})
+          this.state.infowindow.setContent(this.state.content);
+          this.state.infowindow.open(this.initMap, marker);
+        }
+      })
+      // .map((marker) => {
+      //   console.log(this.state.content);
+      // });
+      console.log("after" + this.state.content)
   };
 
   //* This function initalizes the map
   initMap = () => {
+    //* Creates a new info window instance to use on markers and then sets it to state
+    let infowindow = new window.google.maps.InfoWindow();
+    this.setState({ infowindow: infowindow });
+
     const map = new window.google.maps.Map(document.getElementById("map"), {
       center: { lat: 29.424122, lng: -98.493628 },
       zoom: 11,
@@ -201,11 +211,8 @@ class App extends Component {
       // * Pushes markers to state after they have been created`
       this.setState(() => this.state.markers.push(marker));
 
-      //* Creates a new info window instance to use on markers and then sets it to state
-      let infowindow = new window.google.maps.InfoWindow();
-      this.setState({ infowindow: infowindow });
-
       // *This is the information displayed in the infowindow
+      // TODO: Build a callback that creates this information for the list items when clicked
       let content = `
         <div id="infowindow">
         <h1 class = "infoHeader">
@@ -236,8 +243,8 @@ class App extends Component {
   getVenues = () => {
     const endpoint = "https://api.foursquare.com/v2/venues/explore?";
     const parameters = {
-      client_id: `${fs_client_api}`,
-      client_secret: `${fs_secret_api}`,
+      client_id: "SHKPWDT0OVUNMDM400IYZ45CV0CWBKIPDHLD3QMTLYFMMNH4",
+      client_secret: "ZOT1OGISO2HZG0WVP4B5N50XR04SDA3Y2Y4GMLAKEA0LGLVY",
       query: "fun",
       section: "",
       near: "San Antonio",
