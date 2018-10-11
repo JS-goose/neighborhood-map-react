@@ -6,9 +6,9 @@ import Sidebar from "./components/Sidebar";
 import { timingSafeEqual } from "crypto";
 
 //*! API Keys
-const fs_client_api = `${process.env.REACT_APP_FS_CLIENT}`;
-const fs_secret_api = `${process.env.REACT_APP_FS_SECRET}`;
-const GM_API_KEY = `${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`;
+// const fs_client_api = `${process.env.REACT_APP_FS_CLIENT}`;
+// const fs_secret_api = `${process.env.REACT_APP_FS_SECRET}`;
+// const GM_API_KEY = `${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`;
 
 class App extends Component {
   state = {
@@ -28,7 +28,7 @@ class App extends Component {
     window.initMap = this.initMap;
   };
 
-  // this.setState({ content: content });
+  /*// !This function was supposed to dynamically build content for the infowindow but did not work.  Will remove later 
 
   setInfoWinContent = (place) => {
     this.state.venues.filter((place) => place.id === this.state.markers.id).map((place) => {
@@ -46,6 +46,7 @@ class App extends Component {
       </div>`;
     });
   };
+*/
 
   handleVenueClick = (venueListItem) => {
     let content = `
