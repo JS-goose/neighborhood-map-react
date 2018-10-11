@@ -3,6 +3,7 @@ import "./App.css";
 import Map from "./components/Map";
 import axios from "axios";
 import Sidebar from "./components/Sidebar";
+import { timingSafeEqual } from "crypto";
 
 //*! API Keys
 const fs_client_api = `${process.env.REACT_APP_FS_CLIENT}`;
@@ -31,7 +32,9 @@ class App extends Component {
     const marker = this.state.markers
       .filter((marker) => marker.id === venueListItem.venue.venue.id)
       .map((marker) => {
+        this.state.infowindow.setContent(this.state.content)
         this.state.infowindow.open(this.initMap, marker);
+        console.log(this.state.content)
       });
   };
 
@@ -77,6 +80,8 @@ class App extends Component {
           ${index.venue.location.formattedAddress[1]}
         </p>
         </div>`;
+
+      this.setState({content:content});
 
       // * Adds click event listener to markers
       marker.addListener("click", () => {
