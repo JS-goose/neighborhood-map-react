@@ -28,38 +28,44 @@ class App extends Component {
     window.initMap = this.initMap;
   };
 
-  // setInfoWinContent = () => {
-  //   console.log(this.state.venues)
-  //   let content = `
-  //       <div id="infowindow">
-  //       <h1 class = "infoHeader">
-  //         ${this.state.venues.venue.name}
-  //       </h1>
-  //       <p>
-  //         ${this.state.venues.venue.location.formattedAddress[0]}
-  //       </p>
-  //       <p>
-  //         ${this.state.venues.venue.location.formattedAddress[1]}
-  //       </p>
-  //       </div>`;
+  // this.setState({ content: content });
 
-  //   this.setState({ content: content });
-  // };
+  setInfoWinContent = (place) => {
+    this.state.venues.filter((place) => place.id === this.state.markers.id).map((place) => {
+      let content = `
+      <div id="infowindow">
+      <h1 class = "infoHeader">
+        ${place.venue.name}
+      </h1>
+      <p>
+        ${place.venue.location.formattedAddress[0]}
+      </p>
+      <p>
+        ${place.venue.location.formattedAddress[1]}
+      </p>
+      </div>`;
+    });
+  };
 
   handleVenueClick = (venueListItem) => {
-    console.log("before" + this.state.content);
+    let content = `
+      <div id="infowindow">
+      <h1 class = "infoHeader">
+        ${venueListItem.venue.venue.name}
+      </h1>
+      <p>
+        ${venueListItem.venue.venue.location.formattedAddress[0]}
+      </p>
+      <p>
+        ${venueListItem.venue.venue.location.formattedAddress[1]}
+      </p>
+      </div>`;
     const marker = this.state.markers.filter((marker) => {
       if (marker.id === venueListItem.venue.venue.id) {
-        // this.setState({content:venueListItem.venue.venue.name})
-        this.state.infowindow.setContent(this.state.content);
-        // this.setInfoWinContent();
+        this.state.infowindow.setContent(content);
         this.state.infowindow.open(this.initMap, marker);
       }
     });
-    // .map((marker) => {
-    //   console.log(this.state.content);
-    // });
-    console.log("after" + this.state.content);
   };
 
   //* This function initalizes the map
@@ -231,20 +237,20 @@ class App extends Component {
 
       // *This is the information displayed in the infowindow
       // TODO: Build a callback that creates this information for the list items when clicked
-      let content = `
-        <div id="infowindow">
-        <h1 class = "infoHeader">
-          ${index.venue.name}
-        </h1>
-        <p>
-          ${index.venue.location.formattedAddress[0]}
-        </p>
-        <p>
-          ${index.venue.location.formattedAddress[1]}
-        </p>
-        </div>`;
+      // let content = `
+      //   <div id="infowindow">
+      //   <h1 class = "infoHeader">
+      //     ${index.venue.name}
+      //   </h1>
+      //   <p>
+      //     ${index.venue.location.formattedAddress[0]}
+      //   </p>
+      //   <p>
+      //     ${index.venue.location.formattedAddress[1]}
+      //   </p>
+      //   </div>`;
 
-      this.setState({ content: content });
+      // this.setState({ content: content });
 
       // * Adds click event listener to markers
       marker.addListener("click", () => {
