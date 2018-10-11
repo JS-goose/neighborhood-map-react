@@ -1,17 +1,19 @@
 import React, { Component } from "react";
 import VenueItem from "./VenueItem";
 
-class SidebarList extends Component {
-  render() {
-    return (
-      <ol id="venueList">
-        {this.props.venues &&
-          this.props.venues.map((venue,venueKey) => (
-            <VenueItem key={venueKey} venue={venue} handleVenueClick={this.props.handleVenueClick}/>
-          ))}
-      </ol>
-    );
-  }
-}
+const SidebarList = ({ venues, handleVenueClick }) => {
+  return (
+    <ol id="venueList">
+      {venues &&
+        venues.map((venue, venueKey) => (
+          <VenueItem
+            key={venueKey}
+            venue={venue}
+            handleVenueClick={handleVenueClick}
+          />
+        ))}
+    </ol>
+  );
+};
 
 export default SidebarList;
