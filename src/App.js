@@ -28,7 +28,11 @@ class App extends Component {
   };
 
   handleVenueClick = (venueListItem) => {
-    // const marker = this.state.markers.filter((marker) => marker.id ===)
+    const marker = this.state.markers
+      .filter((marker) => marker.id === venueListItem.venue.venue.id)
+      .map((marker) => {
+        this.state.infowindow.open(this.initMap, marker);
+      });
   };
 
   //* This function initalizes the map
@@ -58,7 +62,7 @@ class App extends Component {
 
       //* Creates a new info window instance to use on markers and then sets it to state
       let infowindow = new window.google.maps.InfoWindow();
-      this.setState({infowindow:infowindow});
+      this.setState({ infowindow: infowindow });
 
       // *This is the information displayed in the infowindow
       let content = `
