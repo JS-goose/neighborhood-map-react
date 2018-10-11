@@ -22,9 +22,7 @@ class App extends Component {
   }
   //* This function loads the map
   loadMap = () => {
-    loadScript(
-      `https://maps.googleapis.com/maps/api/js?key=${GM_API_KEY}&callback=initMap`
-    );
+    loadScript(`https://maps.googleapis.com/maps/api/js?key=${GM_API_KEY}&callback=initMap`);
     window.initMap = this.initMap;
   };
 
