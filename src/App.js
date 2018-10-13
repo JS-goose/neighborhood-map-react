@@ -48,10 +48,9 @@ class App extends Component {
         this.state.infowindow.setContent(content);
         this.state.infowindow.open(this.initMap, marker);
         marker.setAnimation(window.google.maps.Animation.BOUNCE);
+        // marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
       } else {
-        window.setTimeout(() => {
-          marker.setAnimation(null);
-        }, 300);
+        marker.setAnimation(null);
       }
     });
   };
@@ -218,6 +217,7 @@ class App extends Component {
         title: title,
         animation: window.google.maps.Animation.DROP,
         id: index.venue.id,
+        icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
       });
 
       // * Pushes markers to state after they have been created`
