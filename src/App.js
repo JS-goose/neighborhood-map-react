@@ -38,6 +38,7 @@ class App extends Component {
   };
 
   handleVenueClick = (venueListItem) => {
+    const marker = this.state.markers;
     let content = `
       <div id="infowindow">
       <h1 class = "infoHeader">
@@ -50,19 +51,16 @@ class App extends Component {
         ${venueListItem.venue.venue.location.formattedAddress[1]}
       </p>
       </div>`;
-    const marker = this.state.markers.filter((marker) => {
+    marker.filter((marker) => {
       if (marker.id === venueListItem.venue.venue.id) {
         this.state.infowindow.setContent(content);
         this.state.infowindow.open(this.initMap, marker);
-        console.log(marker.setAnimation === true)
-        
-        if (marker.setAnimation === marker.setAnimation.BOUNCE) {
+
+        if (marker.getAnimation() !== null) {
           marker.setAnimation(null);
         } else {
           marker.setAnimation(window.google.maps.Animation.BOUNCE);
         }
-        console.log(marker.setAnimation === true)
-
       }
     });
   };
