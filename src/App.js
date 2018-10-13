@@ -21,14 +21,6 @@ class App extends Component {
     this.getVenues();
   }
 
-  // toggleBounce = () => {
-  //   if (this.state.markers.getAnimation() !== null) {
-  //     this.state.markers.setAnimation(null);
-  //   } else {
-  //     this.state.markers.setAnimation(window.google.maps.Animation.BOUNCE);
-  //   }
-  // }
-
   //* This function loads the map
   loadMap = () => {
     loadScript(
@@ -55,12 +47,11 @@ class App extends Component {
       if (marker.id === venueListItem.venue.venue.id) {
         this.state.infowindow.setContent(content);
         this.state.infowindow.open(this.initMap, marker);
-
-        if (marker.getAnimation() !== null) {
+        marker.setAnimation(window.google.maps.Animation.BOUNCE);
+      } else {
+        window.setTimeout(() => {
           marker.setAnimation(null);
-        } else {
-          marker.setAnimation(window.google.maps.Animation.BOUNCE);
-        }
+        }, 300);
       }
     });
   };
