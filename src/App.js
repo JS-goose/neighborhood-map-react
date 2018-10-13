@@ -48,7 +48,6 @@ class App extends Component {
         this.state.infowindow.setContent(content);
         this.state.infowindow.open(this.initMap, marker);
         marker.setAnimation(window.google.maps.Animation.BOUNCE);
-        // marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
       } else {
         marker.setAnimation(null);
       }
@@ -255,7 +254,7 @@ class App extends Component {
     const parameters = {
       client_id: "SHKPWDT0OVUNMDM400IYZ45CV0CWBKIPDHLD3QMTLYFMMNH4",
       client_secret: "ZOT1OGISO2HZG0WVP4B5N50XR04SDA3Y2Y4GMLAKEA0LGLVY",
-      query: "fun",
+      query: "parks",
       section: "",
       near: "San Antonio",
       v: "20181008",
