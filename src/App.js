@@ -28,26 +28,6 @@ class App extends Component {
     window.initMap = this.initMap;
   };
 
-  /*// !This function was supposed to dynamically build content for the infowindow but did not work.  Will remove later 
-
-  setInfoWinContent = (place) => {
-    this.state.venues.filter((place) => place.id === this.state.markers.id).map((place) => {
-      let content = `
-      <div id="infowindow">
-      <h1 class = "infoHeader">
-        ${place.venue.name}
-      </h1>
-      <p>
-        ${place.venue.location.formattedAddress[0]}
-      </p>
-      <p>
-        ${place.venue.location.formattedAddress[1]}
-      </p>
-      </div>`;
-    });
-  };
-*/
-
   handleVenueClick = (venueListItem) => {
     let content = `
       <div id="infowindow">
