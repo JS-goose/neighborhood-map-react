@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 .App-link {
@@ -35,18 +35,19 @@ html, body {
   /* TODO: Add media query to adjust map height at lower resolution */
   height: 100vh;
   max-height: 100vh;
-  width: 80%;
-  max-width: 80vw;
+  width: 75%;
+  max-width: 75vw;
 }
 
 #sidebarContainer {
   background: lightblue;
-  width: 20%;
-  min-width: 20%;
+  width: 25%;
+  min-width: 25%;
   border-right: 1px solid rgba(0, 0, 0, 0.5);
   height: 100vh;
   max-height: 100%;
-  /* overflow: hidden; */
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 #sidebarHeader {
@@ -54,12 +55,13 @@ html, body {
 }
 
 #venueList {
-  display: flex;
-  flex-flow: column nowrap;
+  /* display: flex;
+  flex-flow: column nowrap; */
+  width: 100%;
   list-style: none;
   padding: 0.1em;
   max-height: 100%;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 .venueItem {
@@ -68,6 +70,7 @@ html, body {
   margin-top: 0.3rem;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  width: 100%;
 }
 
 input {
