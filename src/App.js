@@ -236,28 +236,26 @@ class App extends Component {
       // * Pushes markers to state after they have been created`
       this.setState(() => this.state.markers.push(marker));
 
-      // *This is the information displayed in the infowindow
-      // TODO: Build a callback that creates this information for the list items when clicked
-      // let content = `
-      //   <div id="infowindow">
-      //   <h1 class = "infoHeader">
-      //     ${index.venue.name}
-      //   </h1>
-      //   <p>
-      //     ${index.venue.location.formattedAddress[0]}
-      //   </p>
-      //   <p>
-      //     ${index.venue.location.formattedAddress[1]}
-      //   </p>
-      //   </div>`;
-
-      // this.setState({ content: content });
+      // *This is the information displayed in the infowindow upon clicking a marker
+      let content = `
+        <div id="infowindow">
+        <h1 class = "infoHeader">
+          ${index.venue.name}
+        </h1>
+        <p>
+          ${index.venue.location.formattedAddress[0]}
+        </p>
+        <p>
+          ${index.venue.location.formattedAddress[1]}
+        </p>
+        </div>`;
 
       // * Adds click event listener to markers
       marker.addListener("click", () => {
-        // * Resets info window and content when marker is clicked
+        // * Resets info window content when marker is clicked
+        this.setState({ content: content });
+        // * Sets info window content based on state
         this.state.infowindow.setContent(this.state.content);
-
         // * Opens info window on marker when clicked
         this.state.infowindow.open(map, marker);
       });
