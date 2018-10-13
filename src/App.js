@@ -264,15 +264,14 @@ class App extends Component {
     axios
       .get(endpoint + new URLSearchParams(parameters))
       .then((response) => {
-        // console.log(response);
         //* Setting state for venues
         this.setState(
           {
             venues: response.data.response.groups[0].items,
           },
           this.loadMap()
-        ); /* //*the loadMap call was added here to load once the venues has been populated.  
-            //*If this call were to be in componentDidMount our loop would have no info to loop over*/
+        ); //*the loadMap call was added here to load once the venues has been populated.  
+          //*If this call were to be in componentDidMount our loop would have no info to loop over
       })
       .catch((error) => {
         console.log(`Error in Axios get: ${error}`);
