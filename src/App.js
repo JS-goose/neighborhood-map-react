@@ -254,6 +254,7 @@ class App extends Component {
     const parameters = {
       client_id: "SHKPWDT0OVUNMDM400IYZ45CV0CWBKIPDHLD3QMTLYFMMNH4",
       client_secret: "ZOT1OGISO2HZG0WVP4B5N50XR04SDA3Y2Y4GMLAKEA0LGLVY",
+      venue_id: "",
       query: "parks",
       section: "",
       near: "San Antonio",
@@ -264,6 +265,7 @@ class App extends Component {
     axios
       .get(endpoint + new URLSearchParams(parameters))
       .then((response) => {
+        console.log(response)
         //* Setting state for venues
         this.setState(
           {
@@ -282,10 +284,7 @@ class App extends Component {
     return (
       <div className="App">
         <main id="main">
-          <Sidebar
-            {...this.state}
-            handleVenueClick={this.handleVenueClick}
-          />
+          <Sidebar {...this.state} handleVenueClick={this.handleVenueClick} />
           <Map {...this.state} />
         </main>
       </div>
