@@ -32,7 +32,7 @@ class App extends Component {
   handleVenueClick = (venueListItem) => {
     const marker = this.state.markers;
     let content = `
-      <div className="infowindow">
+      <div class="infowindow">
       <h1 class = "infoHeader">
         ${venueListItem.venue.venue.name}
       </h1>
@@ -229,7 +229,7 @@ class App extends Component {
 
       // *This is the information displayed in the infowindow upon clicking a marker
       let content = `
-        <div className="infowindow">
+        <div class="infowindow">
         <h1 class = "infoHeader">
           ${index.venue.name}
         </h1>

@@ -84,12 +84,11 @@ input {
 }
 
 .infowindow {
-  background-color:  yellow !important;
+  color: darkcyan;
 }
 
-.infoHeader {
-  color: darkcyan;
-  text-decoration: underline;
+.infowindow a {
+  color: salmon;
 }
 
 @media screen and (max-width: 500px) {
