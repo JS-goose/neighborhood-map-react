@@ -55,26 +55,25 @@ body {
 }
 
 #venueList {
-  width: 100%;
   list-style: none;
   padding: 0.1em;
   max-height: 100%;
 }
 
 .venueItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.1rem;
   padding: 0.2rem;
   margin-top: 0.3rem;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-  width: 100%;
   text-transform: capitalize;
 }
 
 .venueItem:hover {
   color: salmon;
-  text-transform: uppercase;
   text-decoration: underline;
-  transform: scale(1.2);
   font-weight: bold;
   cursor: pointer;
 }
