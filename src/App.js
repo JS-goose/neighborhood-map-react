@@ -259,6 +259,7 @@ class App extends Component {
       section: "",
       near: "San Antonio",
       v: "20181008",
+      photos: true,
     };
 
     //* Here we request data using Axios https://github.com/axios/axios
