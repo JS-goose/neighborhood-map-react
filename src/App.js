@@ -30,6 +30,8 @@ class App extends Component {
   };
 
   handleVenueClick = (venueListItem) => {
+    console.log(venueListItem)
+
     const marker = this.state.markers;
     let content = `
       <div id="infowindow">
@@ -42,6 +44,11 @@ class App extends Component {
       <p>
         ${venueListItem.venue.venue.location.formattedAddress[1]}
       </p>
+      <p>
+        <a href='https://foursquare.com/v/${
+          venueListItem.venue.venue.id
+        }' target="blank">More Info</a>
+        </p>
       </div>`;
     marker.filter((marker) => {
       if (marker.id === venueListItem.venue.venue.id) {
@@ -234,6 +241,11 @@ class App extends Component {
         <p>
           ${index.venue.location.formattedAddress[1]}
         </p>
+        <p>
+        <a href="https://foursquare.com/v/${
+          index.venue.id
+        }" target="blank">More Info</a>
+        </p>
         </div>`;
 
       // * Adds click event listener to markers
@@ -264,7 +276,7 @@ class App extends Component {
     axios
       .get(endpoint + new URLSearchParams(parameters))
       .then((response) => {
-        console.log(response)
+        console.log(response);
         //* Setting state for venues
         this.setState(
           {
