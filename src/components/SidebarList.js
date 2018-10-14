@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import VenueItem from "./VenueItem";
 
-const SidebarList = ({ venues, handleVenueClick, infowindow, content, venueColorChange }) => {
+const SidebarList = ({ venues, handleVenueClick, infowindow, content, ven }) => {
   return (
     <ol id="venueList">
       {venues &&
@@ -12,7 +12,6 @@ const SidebarList = ({ venues, handleVenueClick, infowindow, content, venueColor
             handleVenueClick={handleVenueClick}
             infowindow={infowindow}
             content={content}
-            venueColorChange={venueColorChange}
           />
         ))}
     </ol>

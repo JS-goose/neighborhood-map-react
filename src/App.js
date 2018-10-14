@@ -16,14 +16,6 @@ class App extends Component {
     markers: [],
   };
 
-  venueColorChange = (venueListItem) => {
-    this.state.venues.map((venueListItem) => {
-      venueListItem.addListener("mouseover", () => {
-        console.log(this.name);
-      });
-    });
-  };
-
   //* This is a lifecycle event that fires after the component is loaded into the DOM and renders the map
   componentDidMount() {
     this.getVenues();
@@ -293,7 +285,6 @@ class App extends Component {
           <Sidebar
             {...this.state}
             handleVenueClick={this.handleVenueClick}
-            venueColorChange={this.venueColorChange}
           />
           <Map {...this.state} />
         </main>

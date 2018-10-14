@@ -12,7 +12,6 @@ class Sidebar extends Component {
         <SidebarList
           {...this.props}
           handleVenueClick={this.props.handleVenueClick}
-          venueColorChange={this.props.venueColorChange}
           />
       </aside>
     );

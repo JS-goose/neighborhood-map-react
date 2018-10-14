@@ -6,7 +6,6 @@ class VenueItem extends Component {
       <li
         className="venueItem"
         onClick={() => this.props.handleVenueClick(this.props)}
-        onMouseOver={() => this.props.venueColorChange()}
       >
         {this.props.venue.venue.name}
       </li>
