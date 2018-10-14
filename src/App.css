@@ -40,7 +40,7 @@ body {
 }
 
 #sidebarContainer {
-  background: lightblue;
+  /* background: lightblue; */
   width: 25%;
   min-width: 25%;
   border-right: 1px solid rgba(0, 0, 0, 0.5);
@@ -55,6 +55,9 @@ body {
 }
 
 #venueList {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   list-style: none;
   padding: 0.1em;
   max-height: 100%;
@@ -63,12 +66,13 @@ body {
 .venueItem {
   display: flex;
   align-items: center;
-  justify-content: center;
   font-size: 1.1rem;
   padding: 0.2rem;
-  margin-top: 0.3rem;
+  margin-top: 0.2rem;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   text-transform: capitalize;
+  background-color: #5778CC;
+  width: 75%;
 }
 
 .venueItem:hover {
@@ -76,6 +80,8 @@ body {
   text-decoration: underline;
   font-weight: bold;
   cursor: pointer;
+  text-transform: uppercase;
+  transform: scale(1.1);
 }
 
 input {
@@ -83,7 +89,7 @@ input {
 }
 
 .infowindow {
-  color: darkcyan;
+  color: #5778CC;
 }
 
 .infowindow a {
