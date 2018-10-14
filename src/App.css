@@ -83,6 +83,15 @@ input {
   margin-left: 5px;
 }
 
+.infowindow {
+  background-color:  yellow !important;
+}
+
+.infoHeader {
+  color: darkcyan;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 500px) {
   #sidebarContainer {
     width: 35%;
