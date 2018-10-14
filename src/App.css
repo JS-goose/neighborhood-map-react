@@ -73,6 +73,7 @@ body {
   text-transform: capitalize;
   background-color: #5778CC;
   width: 75%;
+  border-radius: 5px;
 }
 
 .venueItem:hover {
@@ -82,6 +83,7 @@ body {
   cursor: pointer;
   text-transform: uppercase;
   transform: scale(1.1);
+  box-shadow: 1px 1px 5px rgb(68, 67, 67);
 }
 
 input {
