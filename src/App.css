@@ -55,34 +55,33 @@ body {
 }
 
 #venueList {
-  /* display: flex;
-  flex-flow: column nowrap; */
   width: 100%;
   list-style: none;
   padding: 0.1em;
   max-height: 100%;
-  /* overflow: auto; */
 }
 
 .venueItem {
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding: 0.2rem;
   margin-top: 0.3rem;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
   width: 100%;
+  text-transform: capitalize;
 }
 
 .venueItem:hover {
   color: salmon;
-  font-size: 1.1rem;
-  text-shadow: 1px 1px 1px black;
+  text-transform: uppercase;
+  text-decoration: underline;
+  transform: scale(1.2);
+  font-weight: bold;
+  cursor: pointer;
 }
 
 input {
   margin-left: 5px;
 }
-
 
 @media screen and (max-width: 500px) {
   #sidebarContainer {
