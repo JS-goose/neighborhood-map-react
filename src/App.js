@@ -16,6 +16,14 @@ class App extends Component {
     markers: [],
   };
 
+  venueColorChange = (venueListItem) => {
+    this.state.venues.map((venueListItem) => {
+      venueListItem.addListener("mouseover", () => {
+        console.log(this.name);
+      });
+    });
+  };
+
   //* This is a lifecycle event that fires after the component is loaded into the DOM and renders the map
   componentDidMount() {
     this.getVenues();
@@ -216,7 +224,7 @@ class App extends Component {
         title: title,
         animation: window.google.maps.Animation.DROP,
         id: index.venue.id,
-        icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+        icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
       });
 
       // * Pushes markers to state after they have been created`
@@ -270,8 +278,8 @@ class App extends Component {
             venues: response.data.response.groups[0].items,
           },
           this.loadMap()
-        ); //*the loadMap call was added here to load once the venues has been populated.  
-          //*If this call were to be in componentDidMount our loop would have no info to loop over
+        ); //*the loadMap call was added here to load once the venues has been populated.
+        //*If this call were to be in componentDidMount our loop would have no info to loop over
       })
       .catch((error) => {
         console.log(`Error in Axios get: ${error}`);
@@ -282,7 +290,11 @@ class App extends Component {
     return (
       <div className="App">
         <main id="main">
-          <Sidebar {...this.state} handleVenueClick={this.handleVenueClick} />
+          <Sidebar
+            {...this.state}
+            handleVenueClick={this.handleVenueClick}
+            venueColorChange={this.venueColorChange}
+          />
           <Map {...this.state} />
         </main>
       </div>
