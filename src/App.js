@@ -14,6 +14,9 @@ class App extends Component {
   state = {
     venues: [],
     markers: [],
+    updateSuperState: obj => {
+      this.setState(obj);
+    }
   };
 
   //* This is a lifecycle event that fires after the component is loaded into the DOM and renders the map
