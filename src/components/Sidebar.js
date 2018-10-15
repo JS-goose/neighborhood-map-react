@@ -23,9 +23,11 @@ class Sidebar extends Component {
       // console.log("venue id - " + venue.venue.id)
       // console.log("marker id - " + marker.id)
       if (firstMatched) {
-        marker.isVisible = true;
+        console.log('matched!')
+        // marker.isVisible = true;
       } else {
-        marker.isVisible = false;
+        console.log('not matched!')
+        // marker.isVisible = false;
       }
       return marker;
     });
