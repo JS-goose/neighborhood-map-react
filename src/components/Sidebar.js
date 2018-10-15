@@ -24,10 +24,10 @@ class Sidebar extends Component {
       // console.log("marker id - " + marker.id)
       if (firstMatched) {
         console.log('matched!')
-        // marker.isVisible = true;
+        this.props.markers.isVisible = true;
       } else {
         console.log('not matched!')
-        // marker.isVisible = false;
+        this.props.markers.isVisible = false;
       }
       return marker;
     });
