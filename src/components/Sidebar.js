@@ -20,18 +20,16 @@ class Sidebar extends Component {
       const marker = this.props.markers.find(
         (marker) => marker.id === venue.venue.id
       );
-      // console.log("venue id - " + venue.venue.id)
-      // console.log("marker id - " + marker.id)
       if (firstMatched) {
         console.log('matched!')
-        this.props.markers.isVisible = true;
+        marker.setVisible(true);
       } else {
         console.log('not matched!')
-        this.props.markers.isVisible = false;
+        marker.setVisible(false);
       }
       return marker;
     });
-    this.props.updateSuperState({ markers });
+    this.props.updateSuperState({ markers:markers });
   };
 
   render() {
