@@ -43,7 +43,8 @@ body {
 }
 
 #sidebarContainer {
-  /* background: lightblue; */
+  display: flex;
+  flex-flow: column nowrap;
   width: 25%;
   min-width: 25%;
   border-right: 1px solid rgba(0, 0, 0, 0.5);
@@ -100,6 +101,14 @@ input {
 
 .infowindow a {
   color: salmon;
+}
+
+#hamburger {
+  font-size: 2rem;
+  position: inherit;
+  left: 200px;
+  z-index: 1;
+  /* top: 100px; */
 }
 
 @media screen and (max-width: 500px) {

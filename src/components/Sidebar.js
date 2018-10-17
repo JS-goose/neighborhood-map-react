@@ -43,8 +43,9 @@ class Sidebar extends Component {
   render() {
     return (
       <aside id="sidebarContainer">
-        <div id="hamburger">&#9776;</div>
-        <h1 id="sidebarHeader">San Antonio Parks</h1>
+        <h1 id="sidebarHeader">
+          San Antonio Parks <span id="hamburger">&#9776;</span>
+        </h1>
         <label htmlFor="filter">Search Venues</label>
         <input
           id="filter"
