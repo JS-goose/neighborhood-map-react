@@ -11,12 +11,14 @@ class Sidebar extends Component {
 
   filterVenueListings = () => {
     if (this.state.query.trim !== "") {
-      const venues = this.props.venues.filter((venueListing) => 
-        venueListing.venue.name.toLowerCase().includes(this.state.query.toLowerCase())
-      )
-      return venues
+      const venues = this.props.venues.filter((venueListing) =>
+        venueListing.venue.name
+          .toLowerCase()
+          .includes(this.state.query.toLowerCase())
+      );
+      return venues;
     }
-    return this.props.venues
+    return this.props.venues;
   };
 
   handleInputChange = (event) => {
@@ -35,12 +37,13 @@ class Sidebar extends Component {
       }
       return marker;
     });
-    this.props.updateSuperState({ markers:markers });
+    this.props.updateSuperState({ markers: markers });
   };
 
   render() {
     return (
       <aside id="sidebarContainer">
+        <div id="hamburger">&#9776;</div>
         <h1 id="sidebarHeader">San Antonio Parks</h1>
         <label htmlFor="filter">Search Venues</label>
         <input
