@@ -9,7 +9,15 @@ class Sidebar extends Component {
     };
   }
 
-  filterVenueListings = () => {};
+  filterVenueListings = () => {
+    if (this.state.query.trim !== "") {
+      const venues = this.props.venues.filter((venueListing) => 
+        venueListing.venue.name.toLowerCase().includes(this.state.query.toLowerCase())
+      )
+      return venues
+    }
+    return this.props.venues
+  };
 
   handleInputChange = (event) => {
     this.setState({ query: event.target.value });
@@ -46,6 +54,7 @@ class Sidebar extends Component {
         <SidebarList
           {...this.props}
           handleVenueClick={this.props.handleVenueClick}
+          venues={this.filterVenueListings()}
         />
       </aside>
     );
