@@ -14,9 +14,9 @@ class App extends Component {
   state = {
     venues: [],
     markers: [],
-    updateSuperState: obj => {
+    updateSuperState: (obj) => {
       this.setState(obj);
-    }
+    },
   };
 
   //* This is a lifecycle event that fires after the component is loaded into the DOM and renders the map
@@ -257,6 +257,11 @@ class App extends Component {
         this.state.infowindow.setContent(this.state.content);
         // * Opens info window on marker when clicked
         this.state.infowindow.open(map, marker);
+        // * Markers bounce once when clicked
+        if (marker.title === index.venue.name) {
+          marker.setAnimation(window.google.maps.Animation.BOUNCE);
+        }
+        marker.setAnimation(null);
       });
     });
   };
