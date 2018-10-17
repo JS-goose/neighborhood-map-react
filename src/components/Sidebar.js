@@ -29,10 +29,8 @@ class Sidebar extends Component {
         (marker) => marker.id === venue.venue.id
       );
       if (firstMatched) {
-        console.log('matched!')
         marker.setVisible(true);
       } else {
-        console.log('not matched!')
         marker.setVisible(false);
       }
       return marker;
