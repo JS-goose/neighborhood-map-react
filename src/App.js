@@ -261,7 +261,9 @@ class App extends Component {
         if (marker.title === index.venue.name) {
           marker.setAnimation(window.google.maps.Animation.BOUNCE);
         }
-        marker.setAnimation(null);
+        window.setTimeout(() => {
+          marker.setAnimation(null);
+        }, 3000);
       });
     });
   };
