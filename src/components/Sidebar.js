@@ -9,6 +9,13 @@ class Sidebar extends Component {
     };
   }
 
+  hideSideBar = () => {
+    let menu = document.getElementById("hamburger");
+    menu.addEventListener("click", () => {
+      console.log("click");
+    });
+  };
+
   filterVenueListings = () => {
     if (this.state.query.trim !== "") {
       const venues = this.props.venues.filter((venueListing) =>
@@ -43,9 +50,8 @@ class Sidebar extends Component {
   render() {
     return (
       <aside id="sidebarContainer">
-        <h1 id="sidebarHeader">
-          San Antonio Parks <span id="hamburger">&#9776;</span>
-        </h1>
+        <h1 id="sidebarHeader">San Antonio Parks</h1>
+        {/* <div hideSideBar={this.hideSideBar()} id="hamburger">&#9776;</div> */}
         <label htmlFor="filter">Search Venues</label>
         <input
           id="filter"
