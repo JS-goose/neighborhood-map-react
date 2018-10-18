@@ -9,12 +9,12 @@ class Sidebar extends Component {
     };
   }
 
-  hideSideBar = () => {
-    let menu = document.getElementById("hamburger");
-    menu.addEventListener("click", () => {
-      console.log("click");
-    });
-  };
+  // hideSideBar = () => {
+  //   let menu = document.getElementById("hamburger");
+  //   menu.addEventListener("click", () => {
+  //     console.log("click");
+  //   });
+  // };
 
   filterVenueListings = () => {
     if (this.state.query.trim !== "") {
