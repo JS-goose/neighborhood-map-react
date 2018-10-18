@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SidebarList from "./SidebarList";
+import Popup from "reactjs-popup";
 
 class Sidebar extends Component {
   constructor() {
