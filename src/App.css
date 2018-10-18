@@ -96,7 +96,15 @@ input {
 }
 
 .infowindow {
+  padding: 0;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
   color: var(--blue);
+}
+
+.infoHeader {
+  font-size: 1.2em;
 }
 
 .infowindow a {
@@ -104,16 +112,17 @@ input {
 }
 
 #hamburger {
-  font-size: 2rem;
-  position: inherit;
-  left: 200px;
-  z-index: 1;
-  /* top: 100px; */
+  
 }
 
 @media screen and (max-width: 500px) {
   #sidebarContainer {
     width: 35%;
     min-width: 35%;
+  }
+
+  .venueItem:hover {
+    font-weight: normal;
+    text-transform: capitalize;
   }
 }
