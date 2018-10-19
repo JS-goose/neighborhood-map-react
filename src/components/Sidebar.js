@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SidebarList from "./SidebarList";
-import Popup from "reactjs-popup";
+import Hamburger from "./Hamburger";
 
 class Sidebar extends Component {
   constructor() {
@@ -51,8 +51,8 @@ class Sidebar extends Component {
   render() {
     return (
       <aside id="sidebarContainer">
+        <Hamburger />
         <h1 id="sidebarHeader">San Antonio Parks</h1>
-        {/* <div hideSideBar={this.hideSideBar()} id="hamburger">&#9776;</div> */}
         <label htmlFor="filter">Search Venues</label>
         <input
           id="filter"

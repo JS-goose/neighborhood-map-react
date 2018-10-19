@@ -111,9 +111,14 @@ input {
   color: salmon;
 }
 
-/* #hamburger {
+#hamburger {
   cursor: pointer;
-} */
+  font-size: 2rem;
+}
+
+.hidden {
+  color: red;
+}
 
 @media screen and (max-width: 500px) {
   #sidebarContainer {
