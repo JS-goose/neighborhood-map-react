@@ -84,9 +84,7 @@ body {
 .venueItem:hover {
   color: salmon;
   text-decoration: underline;
-  font-weight: bold;
   cursor: pointer;
-  text-transform: uppercase;
   transform: scale(1.1);
   box-shadow: 1px 1px 5px rgb(68, 67, 67);
 }
