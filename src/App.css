@@ -111,10 +111,14 @@ input {
   color: salmon;
 }
 
-#hamburger {
+/* #hamburger {
   cursor: pointer;
   font-size: 2rem;
-}
+  position: relative;
+  left: 700px;
+  top: 10px; 
+  z-index: 1;
+} */
 
 .hidden {
   color: red;

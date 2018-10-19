@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SidebarList from "./SidebarList";
-import Hamburger from "./Hamburger";
+// import Hamburger from "./Hamburger";
 
 class Sidebar extends Component {
   constructor() {
@@ -51,7 +51,6 @@ class Sidebar extends Component {
   render() {
     return (
       <aside id="sidebarContainer">
-        <Hamburger />
         <h1 id="sidebarHeader">San Antonio Parks</h1>
         <label htmlFor="filter">Search Venues</label>
         <input

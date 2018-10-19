@@ -3,6 +3,7 @@ import "./App.css";
 import Map from "./components/Map";
 import axios from "axios";
 import Sidebar from "./components/Sidebar";
+// import Hamburger from "./components/Hamburger"
 import { timingSafeEqual } from "crypto";
 
 //*! API Keys
@@ -302,6 +303,7 @@ class App extends Component {
     return (
       <div className="App">
         <main id="main">
+        {/* <Hamburger /> */}
           <Sidebar {...this.state} handleVenueClick={this.handleVenueClick} />
           <Map {...this.state} />
         </main>
