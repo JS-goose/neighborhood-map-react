@@ -4,7 +4,7 @@ class Navbar extends Component {
     render() {
         return(
             <div id="navbar">
-                This is the Navbar
+                <button id="menu">Menu</button>
             </div>
 
         )
