@@ -31,13 +31,20 @@ body {
 #nav {
   display: flex;
   flex-direction: row;
+  align-items: center;
   border: 1px solid red;
   width: 100vw;
   height: 10vh;
 }
 
-#navbar {
-  border: 1px solid black;
+#menu {
+  height: 30px;
+  width: 60px;
+  margin-left: 5px;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 #main {
