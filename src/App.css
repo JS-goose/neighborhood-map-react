@@ -144,12 +144,17 @@ input {
 
 @media screen and (max-width: 500px) {
   #sidebarContainer {
-    width: 35%;
-    min-width: 35%;
+    /* position: relative; */
+    /* right: 180px; */
+    max-width: 35vw;
+    width: 35vw;
+    min-width: 25vw;
+    z-index: 1;
   }
-
-  .venueItem:hover {
-    font-weight: normal;
-    text-transform: capitalize;
+  
+  #map {
+    max-width: 100%;
+    width: 100vw;
+    min-width: 75vw;
   }
 }
