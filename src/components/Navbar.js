@@ -1,14 +1,24 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 class Navbar extends Component {
-    render() {
-        return(
-            <div id="navbar">
-                <button id="menu">Menu</button>
-            </div>
-
-        )
+  handleButtonClick = () => {
+    let sidebar = document.getElementById("sidebarContainer");
+    if (sidebar.className !== "hidden") {
+    sidebar.className = "hidden";
+    } else {
+        sidebar.className = null;
     }
+
+  };
+  render() {
+    return (
+      <div id="navbar">
+        <button id="menu" onClick={this.handleButtonClick}>
+          Menu
+        </button>
+      </div>
+    );
+  }
 }
 
-export default Navbar
+export default Navbar;

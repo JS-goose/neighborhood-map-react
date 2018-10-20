@@ -3,8 +3,8 @@
 }
 .App {
   text-align: center;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
 .App-link {
@@ -35,6 +35,7 @@ body {
   border: 1px solid red;
   width: 100vw;
   height: 10vh;
+  max-height: 10vh;
 }
 
 #menu {
@@ -45,6 +46,7 @@ body {
   border: none;
   border-radius: 3px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 #main {
@@ -139,7 +141,9 @@ input {
 } */
 
 .hidden {
-  color: red;
+  position: relative;
+  transition: position 0.5s ease;
+  right: 200px;
 }
 
 @media screen and (max-width: 500px) {
@@ -147,7 +151,7 @@ input {
     /* position: relative; */
     /* right: 180px; */
     max-width: 35vw;
-    width: 35vw;
+    width: 45vw;
     min-width: 25vw;
     z-index: 1;
   }
