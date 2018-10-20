@@ -3,8 +3,9 @@ import "./App.css";
 import Map from "./components/Map";
 import axios from "axios";
 import Sidebar from "./components/Sidebar";
-// import Hamburger from "./components/Hamburger"
+import Hamburger from "./components/Hamburger"
 import { timingSafeEqual } from "crypto";
+import Navbar from "./components/Navbar";
 
 //*! API Keys
 // const fs_client_api = `${process.env.REACT_APP_FS_CLIENT}`;
@@ -303,6 +304,7 @@ class App extends Component {
     return (
       <div className="App">
         <main id="main">
+        <Navbar />
         {/* <Hamburger /> */}
           <Sidebar {...this.state} handleVenueClick={this.handleVenueClick} />
           <Map {...this.state} />
