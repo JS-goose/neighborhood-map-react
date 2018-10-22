@@ -52,12 +52,13 @@ class Sidebar extends Component {
     return (
       <aside id="sidebarContainer">
         <h1 id="sidebarHeader">
-          {/* <a href="https://www.foursquare" */}
+          <a href="https://www.foursquare.com" target="blank">
           <img
             id="fourLogo"
             src={require("../images/Powered-by-Foursquare-full-color-300.png")}
             alt="the foursquare logo"
           />
+          </a>
         </h1>
         <label htmlFor="filter">Search Venues</label>
         <input
