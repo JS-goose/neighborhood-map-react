@@ -180,14 +180,12 @@ input {
 /* Media Queries */
 /* ************ */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 350px) {
   #sidebarContainer {
-    /* position: relative; */
-    /* right: 180px; */
-    max-width: 35vw;
-    width: 45vw;
-    min-width: 25vw;
-    z-index: 1;
+    position: relative;
+    right: 500px;
+    width: 0;
+    min-width: 0;
   }
   
   #map {
