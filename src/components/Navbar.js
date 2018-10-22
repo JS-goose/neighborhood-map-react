@@ -16,6 +16,7 @@ class Navbar extends Component {
         <button id="menu" onClick={this.handleButtonClick}>
           Menu
         </button>
+        <h1 id="navbarHeader">San Antonio Parks</h1>
       </div>
     );
   }

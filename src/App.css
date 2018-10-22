@@ -38,6 +38,11 @@ body {
   max-height: 80px;
 }
 
+#navbarHeader {
+  color: var(--blue);
+  font-size: 2rem;
+}
+
 #menu {
   height: 30px;
   width: 60px;
@@ -73,11 +78,6 @@ body {
   max-height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-}
-
-#sidebarHeader {
-  color: var(--blue);
-  font-size: 2rem;
 }
 
 #venueList {
