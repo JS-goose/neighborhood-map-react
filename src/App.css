@@ -38,9 +38,9 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  border: 1px solid red;
+  box-shadow: 1px 1px 5px black;
   width: 100vw;
-  height: 70px;
+  height: 7%;
   max-height: 80px;
   z-index: 1;
 }
@@ -79,7 +79,7 @@ body {
 
 #main {
   width: 100vw;
-  height: 100vh;
+  height: 93%;
   display: flex;
   flex-flow: row nowrap;
 }
@@ -96,8 +96,8 @@ body {
 } */
 
 .map {
-  height: 100vh;
-  max-height: 100vh;
+  height: 93vh;
+  /* max-height: 100vh; */
   width: 100%;
 }
 
