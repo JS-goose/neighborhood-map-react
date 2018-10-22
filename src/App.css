@@ -64,6 +64,10 @@ body {
   cursor: pointer;
 }
 
+#menu:hover {
+  color: #F94877;
+}
+
 /* *********************** */
 /* Main Container Styling */
 /* ********************* */
