@@ -8,4 +8,4 @@ This is an interactive map displaying parks around the city of San Antonio.  The
 If you want to get your own copy of the neighborhood map just follow these simple steps.
 
 ### Get your Google Maps API key
-You'll need to get your own API key for the Google Maps service and it can be found (here)[https://developers.google.com/maps/documentation/javascript/get-api-key]
+You'll need to get your own API key for the Google Maps service and it can be found [here](https://developers.google.com/maps/documentation/javascript/get-api-key)
