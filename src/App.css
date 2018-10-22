@@ -6,7 +6,7 @@
   text-align: center;
   height: 100vh;
   width: 100vw;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 .App-link {
@@ -35,12 +35,14 @@ body {
 /* ********** */
 
 #nav {
+  position: relative;
   display: flex;
   align-items: center;
   border: 1px solid red;
   width: 100vw;
   height: 70px;
   max-height: 80px;
+  z-index: 1;
 }
 
 #navbar {
@@ -123,8 +125,6 @@ body {
 #sidebarContainer {
   display: flex;
   flex-flow: column nowrap;
-  /* width: 25%; */
-  /* min-width: 25%; */
   border-right: 1px solid rgba(0, 0, 0, 0.5);
   height: 100vh;
   max-height: 100%;
@@ -194,7 +194,7 @@ input {
 /* Media Queries */
 /* ************ */
 
-@media screen and (max-width: 350px) {
+/* @media screen and (max-width: 350px) {
   #sidebarContainer {
     position: relative;
     right: 500px;
@@ -211,4 +211,4 @@ input {
   .venueItem:hover {
     font-weight: normal;
   }
-}
+} */
