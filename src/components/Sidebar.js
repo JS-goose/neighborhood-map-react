@@ -54,7 +54,7 @@ class Sidebar extends Component {
         <h1 id="sidebarHeader">
           Venue Info Provided by
         </h1> 
-        <img
+        <img id="fourLogo"
             src={require("../images/FoursquareSocial.png")}
             alt="the foursquare logo"
           />
