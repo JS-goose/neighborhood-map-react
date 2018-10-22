@@ -50,9 +50,9 @@ body {
 }
 
 #menu {
-  height: 30px;
-  width: 60px;
-  margin-left: 5px;
+  height: 40px;
+  width: 100px;
+  margin-left: 10px;
   background-color: var(--blue);
   border: none;
   border-radius: 3px;
