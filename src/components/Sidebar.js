@@ -53,11 +53,12 @@ class Sidebar extends Component {
       <aside id="sidebarContainer">
         <h1 id="sidebarHeader">
           <a href="https://www.foursquare.com" target="blank">
-          <img
-            id="fourLogo"
-            src={require("../images/Powered-by-Foursquare-full-color-300.png")}
-            alt="the foursquare logo"
-          />
+            {/* Image provided by FourSquare https://www.dropbox.com/sh/webqiiog37nr3n9/AAAWknQGw2Y5Zx141I3y_g_Ba/Logos/Developer?dl=0&subfolder_nav_tracking=1 */}
+            <img
+              id="fourLogo"
+              src={require("../images/Powered-by-Foursquare-full-color-300.png")}
+              alt="the foursquare logo"
+            />
           </a>
         </h1>
         <label htmlFor="filter">Search Venues</label>
