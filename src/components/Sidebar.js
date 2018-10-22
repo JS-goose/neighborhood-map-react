@@ -52,10 +52,10 @@ class Sidebar extends Component {
     return (
       <aside id="sidebarContainer">
         <h1 id="sidebarHeader">
-          Venue Info Provided by
+          {/* <a href="https://www.foursquare" */}
           <img
             id="fourLogo"
-            src={require("../images/FoursquareSocial.png")}
+            src={require("../images/Powered-by-Foursquare-full-color-300.png")}
             alt="the foursquare logo"
           />
         </h1>
