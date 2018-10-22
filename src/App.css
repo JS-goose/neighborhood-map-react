@@ -162,6 +162,7 @@ input {
 #fourLogo {
   height: 32px;
   width: 32px;
+  padding-left: 5px;
 }
 
 /* ************************************************ */
