@@ -62,11 +62,11 @@ class Sidebar extends Component {
             />
           </a>
         </h1>
-        <label htmlFor="filter">Search Venues</label>
+        <label htmlFor="filter">Search Venue Listings</label>
         <input
           id="filter"
           type="search"
-          placeholder="amusement park"
+          placeholder="ex. Six Flags"
           onChange={this.handleInputChange}
         />
         <SidebarList
