@@ -58,7 +58,7 @@ body {
 }
 
 #menu {
-  height: 40px;
+  height: 5%;
   width: 100px;
   margin-left: 10px;
   background-color: var(--blue);
@@ -194,21 +194,18 @@ input {
 /* Media Queries */
 /* ************ */
 
-/* @media screen and (max-width: 350px) {
-  #sidebarContainer {
-    position: relative;
-    right: 500px;
-    width: 0;
-    min-width: 0;
-  }
-  
-  #map {
-    max-width: 100%;
-    width: 100vw;
-    min-width: 75vw;
+@media screen and (max-width: 380px) {
+  #navbarHeader {
+    font-size: 1.5rem;
   }
 
   .venueItem:hover {
     font-weight: normal;
   }
-} */
+}
+
+@media screen and (max-width: 320px) {
+  #navbarHeader {
+    font-size: 1rem;
+  }
+}
