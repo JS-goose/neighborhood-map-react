@@ -143,7 +143,7 @@ input {
 .hidden {
   position: relative;
   transition: position 0.5s ease;
-  right: 200px;
+  right: 500px;
 }
 
 @media screen and (max-width: 500px) {
