@@ -147,6 +147,7 @@ body {
   background-color: var(--blue);
   min-width: 95%;
   border-radius: 5px;
+  height: 35px;
 }
 
 .venueItem:hover {
@@ -154,7 +155,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   text-shadow: 1px 1px 5px rgb(68, 67, 67);
-  transform: scale(1.1);
+  transform: scale(1.01);
   box-shadow: 1px 1px 5px rgb(68, 67, 67);
 }
 
