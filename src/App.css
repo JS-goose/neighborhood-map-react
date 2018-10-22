@@ -28,6 +28,10 @@ body {
   font-size: 14px;
 }
 
+/* ************ */
+/* Nav Styling */
+/* ********** */
+
 #nav {
   display: flex;
   align-items: center;
@@ -60,6 +64,10 @@ body {
   cursor: pointer;
 }
 
+/* *********************** */
+/* Main Container Styling */
+/* ********************* */
+
 #main {
   width: 100vw;
   height: 100vh;
@@ -67,12 +75,37 @@ body {
   flex-flow: row nowrap;
 }
 
+/* ************ */
+/* Map Styling */
+/* ********** */
+
 #map {
   height: 100vh;
   max-height: 100vh;
   width: 75%;
   max-width: 75vw;
 }
+
+.infowindow {
+  padding: 0;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+  color: var(--blue);
+  text-transform: capitalize;
+}
+
+.infoHeader {
+  font-size: 1.2em;
+}
+
+.infowindow a {
+  color: salmon;
+}
+
+/* **************** */
+/* Sidebar Styling */
+/* ************** */
 
 #sidebarContainer {
   display: flex;
@@ -120,37 +153,19 @@ input {
   margin-left: 5px;
 }
 
-.infowindow {
-  padding: 0;
-  margin: 0;
-  min-width: 100%;
-  min-height: 100%;
-  color: var(--blue);
-  text-transform: capitalize;
-}
-
-.infoHeader {
-  font-size: 1.2em;
-}
-
-.infowindow a {
-  color: salmon;
-}
-
-/* #hamburger {
-  cursor: pointer;
-  font-size: 2rem;
-  position: relative;
-  left: 700px;
-  top: 10px; 
-  z-index: 1;
-} */
-
+/* ************************************************ */
+/* Styling Applied to Sidebar on Menu Button Click */
+/* **********************************************
+ */
 .hidden {
   position: relative;
   transition: position 0.5s ease;
   right: 500px;
 }
+
+/* ************** */
+/* Media Queries */
+/* ************ */
 
 @media screen and (max-width: 500px) {
   #sidebarContainer {
