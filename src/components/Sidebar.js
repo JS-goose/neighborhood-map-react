@@ -51,7 +51,13 @@ class Sidebar extends Component {
   render() {
     return (
       <aside id="sidebarContainer">
-        <h1 id="sidebarHeader">San Antonio Parks</h1>
+        <h1 id="sidebarHeader">
+          Venue Info Provided by
+        </h1> 
+        <img
+            src={require("../images/FoursquareSocial.png")}
+            alt="the foursquare logo"
+          />
         <label htmlFor="filter">Search Venues</label>
         <input
           id="filter"
