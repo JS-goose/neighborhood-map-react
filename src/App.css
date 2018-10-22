@@ -1,5 +1,6 @@
 :root {
   --blue: #5778cc;
+  --pink: #F94877;
 }
 .App {
   text-align: center;
@@ -146,7 +147,8 @@ body {
 }
 
 .venueItem:hover {
-  color: salmon;
+  color: var(--pink);
+  font-weight: bold;
   text-decoration: underline;
   cursor: pointer;
   transform: scale(1.1);
@@ -185,5 +187,9 @@ input {
     max-width: 100%;
     width: 100vw;
     min-width: 75vw;
+  }
+
+  .venueItem:hover {
+    font-weight: normal;
   }
 }
