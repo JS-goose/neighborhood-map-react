@@ -159,6 +159,11 @@ input {
   margin-left: 5px;
 }
 
+#fourLogo {
+  height: 32px;
+  width: 32px;
+}
+
 /* ************************************************ */
 /* Styling Applied to Sidebar on Menu Button Click */
 /* **********************************************
