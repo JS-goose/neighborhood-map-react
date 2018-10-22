@@ -6,6 +6,7 @@
   text-align: center;
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 .App-link {
@@ -38,7 +39,7 @@ body {
   align-items: center;
   border: 1px solid red;
   width: 100vw;
-  height: 80px;
+  height: 70px;
   max-height: 80px;
 }
 
@@ -174,6 +175,13 @@ input {
   position: relative;
   transition: position 0.5s ease;
   right: 500px;
+  width: 0;
+  min-width: 0;
+}
+
+.wideMap {
+  width: 100%;
+  max-width: 100vw;
 }
 
 /* ************** */
