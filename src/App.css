@@ -30,12 +30,18 @@ body {
 
 #nav {
   display: flex;
-  flex-direction: row;
   align-items: center;
   border: 1px solid red;
   width: 100vw;
   height: 80px;
   max-height: 80px;
+}
+
+#navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-right: 30px;
 }
 
 #navbarHeader {

@@ -4,20 +4,21 @@ class Navbar extends Component {
   handleButtonClick = () => {
     let sidebar = document.getElementById("sidebarContainer");
     if (sidebar.className !== "hidden") {
-    sidebar.className = "hidden";
+      sidebar.className = "hidden";
     } else {
-        sidebar.className = null;
+      sidebar.className = null;
     }
-
   };
   render() {
     return (
-      <div id="navbar">
-        <button id="menu" onClick={this.handleButtonClick}>
-          Menu
-        </button>
+      <nav id="nav">
+        <div id="navbar">
+          <button id="menu" onClick={this.handleButtonClick}>
+            Menu
+          </button>
+        </div>
         <h1 id="navbarHeader">San Antonio Parks</h1>
-      </div>
+      </nav>
     );
   }
 }

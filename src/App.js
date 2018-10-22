@@ -303,9 +303,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav id="nav">
           <Navbar />
-        </nav>
         <main id="main">
           {/* <Hamburger /> */}
           <Sidebar {...this.state} handleVenueClick={this.handleVenueClick} />
