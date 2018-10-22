@@ -149,8 +149,8 @@ body {
 .venueItem:hover {
   color: var(--pink);
   font-weight: bold;
-  text-decoration: underline;
   cursor: pointer;
+  text-shadow: 1px 1px 5px rgb(68, 67, 67);
   transform: scale(1.1);
   box-shadow: 1px 1px 5px rgb(68, 67, 67);
 }
