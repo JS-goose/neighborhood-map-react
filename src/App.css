@@ -126,16 +126,11 @@ body {
   display: flex;
   flex-flow: column nowrap;
   border-right: 1px solid rgba(0, 0, 0, 0.5);
-  height: 100vh;
-  max-height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
 #venueList {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
   list-style: none;
   padding: 0.1em;
   max-height: 100%;
@@ -150,7 +145,7 @@ body {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   text-transform: capitalize;
   background-color: var(--blue);
-  width: 75%;
+  min-width: 95%;
   border-radius: 5px;
 }
 
