@@ -53,11 +53,12 @@ class Sidebar extends Component {
       <aside id="sidebarContainer">
         <h1 id="sidebarHeader">
           Venue Info Provided by
-        </h1> 
-        <img id="fourLogo"
+          <img
+            id="fourLogo"
             src={require("../images/FoursquareSocial.png")}
             alt="the foursquare logo"
           />
+        </h1>
         <label htmlFor="filter">Search Venues</label>
         <input
           id="filter"

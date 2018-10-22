@@ -107,6 +107,11 @@ body {
 /* Sidebar Styling */
 /* ************** */
 
+#fourLogo {
+  height: 32px;
+  width: 32px;
+}
+
 #sidebarContainer {
   display: flex;
   flex-flow: column nowrap;
