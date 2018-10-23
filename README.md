@@ -6,6 +6,8 @@ This is an interactive map displaying parks around the city of San Antonio.  The
 
 Here is a [live demo](#) of the application.
 
+![the neighborhood map of San Antonio parks](./src/images/demoDesktop.png)
+
 ## Getting Started
 If you want to get your own copy of the neighborhood map just follow these simple steps.
 
