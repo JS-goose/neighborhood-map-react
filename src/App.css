@@ -1,6 +1,6 @@
 :root {
   --blue: #5778cc;
-  --pink: #F94877;
+  --pink: #f94877;
 }
 .App {
   text-align: center;
@@ -70,7 +70,7 @@ body {
 }
 
 #menu:hover {
-  color: #F94877;
+  color: #f94877;
 }
 
 /* *********************** */

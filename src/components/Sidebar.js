@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import SidebarList from "./SidebarList";
-// import Hamburger from "./Hamburger";
 
 class Sidebar extends Component {
   constructor() {
@@ -9,13 +8,6 @@ class Sidebar extends Component {
       query: "",
     };
   }
-
-  // hideSideBar = () => {
-  //   let menu = document.getElementById("hamburger");
-  //   menu.addEventListener("click", () => {
-  //     console.log("click");
-  //   });
-  // };
 
   filterVenueListings = () => {
     if (this.state.query.trim !== "") {
@@ -52,7 +44,7 @@ class Sidebar extends Component {
     return (
       <aside id="sidebarContainer">
         <h1 id="sidebarHeader">
-        Powered by 
+          Powered by
           <a href="https://www.foursquare.com" target="blank">
             {/* Image provided by FourSquare https://www.dropbox.com/sh/webqiiog37nr3n9/AACUMJz5FsCCOVsuzYz2ovI6a/App%20Icons/Foursquare%20City%20Guide?dl=0&preview=Foursquare+Social.png&subfolder_nav_tracking=1*/}
             <img

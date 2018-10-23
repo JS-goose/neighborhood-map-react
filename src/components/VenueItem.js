@@ -4,7 +4,7 @@ class VenueItem extends Component {
   render() {
     return (
       <li
-        tabIndex = "0"
+        tabIndex="0"
         className="venueItem"
         onClick={() => this.props.handleVenueClick(this.props)}
       >
