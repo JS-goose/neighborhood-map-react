@@ -3,7 +3,6 @@ import "./App.css";
 import Map from "./components/Map";
 import axios from "axios";
 import Sidebar from "./components/Sidebar";
-import Hamburger from "./components/Hamburger";
 import { timingSafeEqual } from "crypto";
 import Navbar from "./components/Navbar";
 
@@ -303,7 +302,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <Navbar />
+        <Navbar />
         <main id="main">
           {/* <Hamburger /> */}
           <Sidebar {...this.state} handleVenueClick={this.handleVenueClick} />
