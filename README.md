@@ -26,14 +26,14 @@ Your map and locations will not appear because you have not put your API keys in
 ## Put Your API Keys In
 In the `App.js` file on line 31 there is a place labeled `GOOGLE API KEY HERE` - that will get your map loaded.  
 
-![code example of adding Google API Key](./images/googleAPIExample.png)
+![code example of adding Google API Key](images/googleAPIExample.png)
 
 In the same file on lines 276 and 277 you'll see where your Foursquare `secrect API key` and `client API key` need to be placed.  This will get your venues to load.
 
-![code example of adding Foursquare API Key](./images/foursquareAPIExample.png)
+![code example of adding Foursquare API Key](images/foursquareAPIExample.png)
 
 
-### Change Searc Parameters
+### Change Search Parameters
 In `App.js` on lines 278, 279, 280 you'll find the search parameters.  Here you can change the `query` to something of your choosing (ex. entertainment).  The `section` can be left blank but can also be changed to something like `food` or `drinks`.  And lastly the `near` parameter can be changed to your city/location to fetch results near that location.
 
 For a full list of parameter possibilities visit the Foursquare [Documentation](https://developer.foursquare.com/docs).
