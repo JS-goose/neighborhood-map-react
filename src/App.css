@@ -38,7 +38,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  box-shadow: 1px 1px 5px black;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
   width: 100vw;
   height: 7%;
   max-height: 80px;
@@ -88,16 +88,8 @@ body {
 /* Map Styling */
 /* ********** */
 
-/* #map {
-  height: 100vh;
-  max-height: 100vh;
-  width: 75%;
-  max-width: 75vw;
-} */
-
 .map {
   height: 93vh;
-  /* max-height: 100vh; */
   width: 100%;
 }
 
