@@ -49,3 +49,6 @@ No external packages (other than the ones you originally got with these files) a
 * [Google Maps API](https://developers.google.com/maps/documentation/javascript/get-api-key)
 * [Foursquare API](https://developer.foursquare.com/)
 * [Axios](https://github.com/axios/axios)
+
+## Working Offline
+This version of the app will run with a network connection only.  The service worker provided will work once you run `npm run build` in the directory.  Once this process finishes you will have a build version.
