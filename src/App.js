@@ -19,7 +19,8 @@ class App extends Component {
   componentDidMount() {
     this.getVenues();
 
-    // * This will fire and display a message if there are any problems loading the Google Maps API
+    // * This will fire and display a message if there are any problems loading the Google Maps API. 
+    // * Used under advisement from project review at https://www.udacity.com
     window.gm_authFailure = () =>
       alert(
         "Google Maps has encountered an error. Please check the console for more information"
