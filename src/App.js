@@ -18,6 +18,12 @@ class App extends Component {
   //* This is a lifecycle event that fires after the component is loaded into the DOM and renders the map
   componentDidMount() {
     this.getVenues();
+
+    // * This will fire and display a message if there are any problems loading the Google Maps API
+    window.gm_authFailure = () =>
+      alert(
+        "Google Maps has encountered an error. Please check the console for more information"
+      );
   }
 
   //* This function loads the map
@@ -291,6 +297,7 @@ class App extends Component {
       })
       .catch((error) => {
         console.log(`Error in Axios get: ${error}`);
+        alert('There has been an error loading venue data. Please check the console for more information.');
       });
   };
 
