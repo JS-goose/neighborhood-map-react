@@ -4,7 +4,7 @@ This is the final project (#7) in Udacity's FEND Nanodegree.  Below you will fin
 ## Description
 This is an interactive map displaying parks around the city of San Antonio.  The markers drop in upon page load and bounce when clicked or when the corresponding venue is clicked in the venue list.  The venue list may be hidden/shown at anytime simply by clicking the "Menu" button.
 
-Here is a [live demo](#) of the application (not working yet).
+Here is a [live demo](https://js-goose.github.io/neighborhood-map-react/) of the application.
 
 ![the neighborhood map of San Antonio parks](./src/images/demoDesktop.png)
 
